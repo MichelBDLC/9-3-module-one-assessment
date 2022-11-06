@@ -78,8 +78,12 @@ function getAverageIMDBRating(movies) {
 
   for (let movie of movies) {
     if (movie.imdbRating !== "number") {     
-     arrOfRatings.push(Number(movie.imdbRating))
+     arrOfRatings.push(Number(movie.imdbRating));
     }
+  }
+
+  if (arrOfRatings.length === 0) {
+    return 0
   }
 
   let sumOfRatings = 0;
