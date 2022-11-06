@@ -51,11 +51,11 @@ function getAllMovieTitles(movies) {
  *  //> 96
  */
 function getHighestMetascore(movies) {
-  let firstMetascore = movies[0].metascore
+  let firstMetascore = 0
 
   for (let movie of movies) {
 if (movie.metascore > firstMetascore) {
-firstMetascore = movie.metascore  
+firstMetascore = movie.metascore;  
 }
   }
   return Number(firstMetascore)
@@ -79,7 +79,7 @@ function getAverageIMDBRating(movies) {
   for (let movie of movies) {
     if (movie.imdbRating !== "number") {     
      arrOfRatings.push(Number(movie.imdbRating))
-    }   
+    }
   }
 
   let sumOfRatings = 0;
